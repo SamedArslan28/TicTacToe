@@ -74,7 +74,6 @@ def play_game():
             if board[index - 1] == " ":
                 board[index - 1] = player2
 
-
             else:
                 print("Index is full , your turn is over")
                 flip = 1
@@ -86,6 +85,9 @@ def play_game():
                 print_board()
                 print("Draw")
                 break
+            else:
+                flip=1
+
 
     play_again()
 play_game()
