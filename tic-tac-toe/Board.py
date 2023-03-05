@@ -16,7 +16,7 @@ def check_full(board : list):
         return True
 
 
-def win_check(board, mark):
+def win_check(board:list, mark):
     return ((board[6] == mark and board[7] == mark and board[8] == mark) or
             (board[3] == mark and board[4] == mark and board[5] == mark) or
             (board[0] == mark and board[1] == mark and board[2] == mark) or

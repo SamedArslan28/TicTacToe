@@ -12,7 +12,7 @@ def play_again():
 
 
 def play_game():
-    print("                         Welcome to 'Tic-Tac-Toe' \n")
+    print("                         Welcome to 'Tic-Tac-Toe' ")
     print("Board with indexes")
     print("1" + "|" + "2" + "|" + "3")
     print("4" + "|" + "5" + "|" + "6")
@@ -49,11 +49,11 @@ def play_game():
         if flip == 1:
             print_board()
             index = player_choose(player1)
-            if board[index-1]==" ":
+            if board[index - 1] == " ":
                 board[index - 1] = player1
             else:
                 print("Index is full , your turn is over")
-                flip=2
+                flip = 2
             if win_check(board, player1):
                 print_board()
                 print("Player one has won")
@@ -73,7 +73,7 @@ def play_game():
 
             else:
                 print("Index is full , your turn is over")
-                flip=1
+                flip = 1
             if win_check(board, player2):
                 print_board()
                 print("Player two has won")

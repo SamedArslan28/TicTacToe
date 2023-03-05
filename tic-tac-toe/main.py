@@ -55,8 +55,12 @@ def play_game():
                 board[index - 1] = player1
 
             else:
-                print("Index is full , your turn is over")
-                flip = 2
+                print("Index is full")
+                print_board()
+                index = player_choose(player1)
+                if board[index - 1] == " ":
+                    board[index - 1] = player1
+
             if win_check(board, player1):
                 print_board()
                 print("Player one has won")
@@ -75,8 +79,11 @@ def play_game():
                 board[index - 1] = player2
 
             else:
-                print("Index is full , your turn is over")
-                flip = 1
+                print("Index is full ")
+                print_board()
+                index = player_choose(player2)
+                if board[index - 1] == " ":
+                    board[index - 1] = player2
             if win_check(board, player2):
                 print_board()
                 print("Player two has won")
@@ -86,8 +93,9 @@ def play_game():
                 print("Draw")
                 break
             else:
-                flip=1
-
+                flip = 1
 
     play_again()
+
+
 play_game()
